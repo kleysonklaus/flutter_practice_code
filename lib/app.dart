@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice_code/screens/simple_list_view.dart';
 import 'package:flutter_practice_code/widgets/fpc_button.dart';
 
 class App extends StatelessWidget {
@@ -15,7 +16,13 @@ class App extends StatelessWidget {
             children: [
               FpcButtom(
                 label: "Simple List View",
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const SimpleListview(),
+                    ),
+                  );
+                },
               ),
             ],
           ),
