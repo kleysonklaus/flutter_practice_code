@@ -9,6 +9,7 @@ class App extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text("App Demo")),
       body: SingleChildScrollView(
+        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 5),
         child: Center(
           child: Column(
             children: [
