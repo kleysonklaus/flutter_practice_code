@@ -14,6 +14,7 @@ class App extends StatelessWidget {
             children: [
               FpcButtom(
                 label: "primera parte",
+                onTap: () {},
               ),
             ],
           ),
