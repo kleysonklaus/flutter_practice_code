@@ -14,7 +14,7 @@ class App extends StatelessWidget {
           child: Column(
             children: [
               FpcButtom(
-                label: "primera parte",
+                label: "Simple List View",
                 onTap: () {},
               ),
             ],
