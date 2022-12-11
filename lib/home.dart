@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_practice_code/screens/simple_list_view.dart';
 import 'package:flutter_practice_code/widgets/fpc_button.dart';
 
-class App extends StatelessWidget {
-  const App({Key? key}) : super(key: key);
+class Home extends StatelessWidget {
+  const Home({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
