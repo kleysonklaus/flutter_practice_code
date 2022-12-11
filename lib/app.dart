@@ -8,9 +8,9 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("App Demo examples")),
+      appBar: AppBar(title: const Text("App Demo examples")),
       body: SingleChildScrollView(
-        padding: EdgeInsets.symmetric(vertical: 20, horizontal: 5),
+        padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 5),
         child: Center(
           child: Column(
             children: [
@@ -24,7 +24,7 @@ class App extends StatelessWidget {
                   );
                 },
               ),
-              SizedBox(height: 5),
+              const SizedBox(height: 5),
               FpcButtom(
                 label: "Simple List View 2",
                 onTap: () {
