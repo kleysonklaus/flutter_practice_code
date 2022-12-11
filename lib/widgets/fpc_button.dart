@@ -6,6 +6,7 @@ class FpcButtom extends StatelessWidget {
   final double? textFontSize;
   final FontWeight? textFontWeight;
   final Color? backgroundColor;
+  final Color? textColor;
   final double? maxWith;
   final double? mnaxHeight;
   const FpcButtom({
@@ -14,7 +15,8 @@ class FpcButtom extends StatelessWidget {
     this.onTap,
     this.textFontSize = 16.0,
     this.textFontWeight,
-    this.backgroundColor = Colors.purple,
+    this.backgroundColor = Colors.black,
+    this.textColor = Colors.white,
     this.maxWith = 250,
     this.mnaxHeight = 50,
   }) : super(key: key);
@@ -30,6 +32,7 @@ class FpcButtom extends StatelessWidget {
       child: Text(
         label,
         style: TextStyle(
+          color: textColor,
           fontSize: textFontSize,
           fontWeight: textFontWeight,
         ),

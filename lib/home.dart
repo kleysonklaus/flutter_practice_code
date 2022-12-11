@@ -26,7 +26,7 @@ class Home extends StatelessWidget {
               ),
               const SizedBox(height: 5),
               FpcButtom(
-                label: "Simple List View 2",
+                label: "Time Lines",
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute<void>(
