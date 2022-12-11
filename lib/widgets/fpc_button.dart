@@ -31,7 +31,7 @@ class FpcButtom extends StatelessWidget {
         ),
       ),
       style: ElevatedButton.styleFrom(
-        primary: backgroundColor,
+        backgroundColor: backgroundColor,
         minimumSize: Size(maxWith!, mnaxHeight!),
       ),
     );
