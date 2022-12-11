@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_code/screens/simple_list_view.dart';
+import 'package:flutter_practice_code/screens/time_lines.dart';
 import 'package:flutter_practice_code/widgets/fpc_button.dart';
 
 class Home extends StatelessWidget {
@@ -30,7 +31,7 @@ class Home extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (BuildContext context) => const SimpleListview(),
+                      builder: (BuildContext context) => const TimeLines(),
                     ),
                   );
                 },
