@@ -10,14 +10,14 @@ class SimpleListview extends StatelessWidget {
         title: Text("Simple List View"),
       ),
       body: ListView(
-        childre: [
+        children: [
           Text("item1"),
           Text("item2"),
           Text("item3"),
           Text("item4"),
           Text("item5"),
-        ]
-      )
+        ],
+      ),
     );
   }
 }
