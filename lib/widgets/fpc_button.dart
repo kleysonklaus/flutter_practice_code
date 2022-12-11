@@ -23,16 +23,16 @@ class FpcButtom extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onTap,
+      style: ElevatedButton.styleFrom(
+        backgroundColor: backgroundColor,
+        minimumSize: Size(maxWith!, mnaxHeight!),
+      ),
       child: Text(
         label,
         style: TextStyle(
           fontSize: textFontSize,
           fontWeight: textFontWeight,
         ),
-      ),
-      style: ElevatedButton.styleFrom(
-        backgroundColor: backgroundColor,
-        minimumSize: Size(maxWith!, mnaxHeight!),
       ),
     );
   }

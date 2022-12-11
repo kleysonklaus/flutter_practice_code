@@ -7,10 +7,10 @@ class SimpleListview extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Simple List View"),
+        title: const Text("Simple List View"),
       ),
       body: ListView(
-        children: [
+        children: const [
           Text("item1"),
           Text("item2"),
           Text("item3"),
