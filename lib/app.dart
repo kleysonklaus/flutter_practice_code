@@ -24,6 +24,16 @@ class App extends StatelessWidget {
                   );
                 },
               ),
+              FpcButtom(
+                label: "Simple List View 2",
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => const SimpleListview(),
+                    ),
+                  );
+                },
+              ),
             ],
           ),
         ),
