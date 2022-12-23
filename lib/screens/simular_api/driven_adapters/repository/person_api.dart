@@ -3,7 +3,7 @@ import 'package:flutter_practice_code/screens/simular_api/driven_adapters/models
 
 class PersonApi implements MyApi {
   @override
-  Future<Person> getDataPersons() {
+  Future<List<Person>> getDataPersons() {
     // TODO: implement getDataPerson
     throw UnimplementedError();
   }
