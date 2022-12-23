@@ -8,4 +8,12 @@ class Person {
     required this.lastName,
     required this.age,
   });
+
+  factory Person.fromJson(Map<String, dynamic> jsonParsed) {
+    return Person(
+      age: jsonParsed["edad"],
+      lastName: jsonParsed["apellido"],
+      name: jsonParsed["nombre"],
+    );
+  }
 }
