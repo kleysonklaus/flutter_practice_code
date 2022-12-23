@@ -1,8 +1,8 @@
-import 'package:flutter_practice_code/screens/simular_api/driven_adapters/infraestructure/my_api.dart';
 import 'package:flutter_practice_code/screens/simular_api/driven_adapters/models/person.dart';
+import 'package:flutter_practice_code/screens/simular_api/driven_adapters/repository/person_api.dart';
 import 'package:flutter_practice_code/screens/simular_api/helper/helper_data_mock.dart';
 
-class PersonApiMock implements MyApi {
+class PersonApiMock extends PersonApi {
   @override
   Future<List<Person>> getDataPersons() async {
     try {
