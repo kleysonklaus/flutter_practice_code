@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice_code/screens/simular_api/driven_adapters/models/person.dart';
 import 'package:flutter_practice_code/screens/simular_api/enum/enviorment.dart';
 import 'package:flutter_practice_code/screens/simular_api/simple_provider/simple_provider.dart';
+import 'package:flutter_practice_code/widgets/widgets.dart';
 
 class SimularApi extends StatefulWidget {
   final Environment environment;
@@ -27,20 +29,29 @@ class _SimularApiState extends State<SimularApi> {
       appBar: AppBar(
         title: Text("Entorno Actual: ${provider.getLabelEnv()}"),
       ),
-      body: Text("asdasd"),
+      body: FutureBuilder(
+        future: provider.api.getDataPersons(),
+        builder: ((context, AsyncSnapshot<List<Person>> snapshot) {
+          if (snapshot.hasData == false) {
+            return Center(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: const [
+                  CircularProgressIndicator(),
+                  Text("Obteniendo datos")
+                ],
+              ),
+            );
+          }
+          final persons = snapshot.data!;
+          return ListView(
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            children: persons.map((person) {
+              return FpcPersonCard(model: person);
+            }).toList(),
+          );
+        }),
+      ),
     );
-  }
-
-  String _env(Environment environment) {
-    switch (environment) {
-      case Environment.mock:
-        return "Mock";
-      case Environment.testing:
-        return "Testing";
-      case Environment.producction:
-        return "Producction";
-      default:
-        return '';
-    }
   }
 }

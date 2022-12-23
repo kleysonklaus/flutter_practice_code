@@ -6,7 +6,7 @@ class PersonApiMock extends PersonApi {
   @override
   Future<List<Person>> getDataPersons() async {
     try {
-      await Future.delayed(const Duration(seconds: 5));
+      await Future.delayed(const Duration(seconds: 2));
       final data = HelperDataMock().getDataPersonsMock();
 
       return data.map((element) => Person.fromJson(element)).toList();
@@ -14,8 +14,8 @@ class PersonApiMock extends PersonApi {
       return [
         Person(
           age: 99,
-          lastName: "ERROR",
-          name: "Error",
+          lastName: "ERROR MOCK",
+          name: "Error Mock",
         )
       ];
     }
