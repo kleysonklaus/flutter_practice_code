@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_practice_code/screens/metodo_factory/factory.dart';
 import 'package:flutter_practice_code/screens/simple_list_view.dart';
 import 'package:flutter_practice_code/screens/simular_api/enum/enviorment.dart';
 import 'package:flutter_practice_code/screens/simular_api/screen/simular_api.dart';
@@ -47,6 +48,17 @@ class Home extends StatelessWidget {
                       builder: (BuildContext context) => SimularApi(
                         environment: Environment.mock,
                       ),
+                    ),
+                  );
+                },
+              ),
+              const SizedBox(height: 5),
+              FpcButtom(
+                label: "metodo factory",
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<void>(
+                      builder: (BuildContext context) => Factory(),
                     ),
                   );
                 },
