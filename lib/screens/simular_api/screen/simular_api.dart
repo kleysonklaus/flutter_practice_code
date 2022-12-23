@@ -1,17 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_practice_code/screens/simular_api/enum/enviorment.dart';
+import 'package:flutter_practice_code/screens/simular_api/simple_provider/simple_provider.dart';
 
-class SimularApi extends StatelessWidget {
+class SimularApi extends StatefulWidget {
   final Environment environment;
   const SimularApi({
     Key? key,
     required this.environment,
   }) : super(key: key);
+
+  @override
+  State<SimularApi> createState() => _SimularApiState();
+}
+
+class _SimularApiState extends State<SimularApi> {
+  SimpleProvider provider = SimpleProvider();
+  @override
+  void initState() {
+    provider.setEnvironment(environment: widget.environment);
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Entorno Actual: ${_env(environment)}"),
+        title: Text("Entorno Actual: ${provider.getLabelEnv()}"),
       ),
       body: Text("asdasd"),
     );
