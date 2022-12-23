@@ -31,6 +31,31 @@ class HelperDataInternet {
         "apellido": "branch",
         "edad": 26,
       },
+      {
+        "nombre": "chitoge INTERNET",
+        "apellido": "kor",
+        "edad": 17,
+      },
+      {
+        "nombre": "kirisaki INTERNET",
+        "apellido": "dear",
+        "edad": 21,
+      },
+      {
+        "nombre": "ronal INTERNET",
+        "apellido": "yor",
+        "edad": 25,
+      },
+      {
+        "nombre": "liz INTERNET",
+        "apellido": "mine",
+        "edad": 14,
+      },
+      {
+        "nombre": "lucero INTERNET",
+        "apellido": "light",
+        "edad": 26,
+      },
     ];
   }
 }
