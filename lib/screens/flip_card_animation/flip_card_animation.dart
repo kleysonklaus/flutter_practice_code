@@ -64,7 +64,7 @@ class _FlipCardWidgetState extends State<_FlipCardWidget>
   void initState() {
     super.initState();
     controller = AnimationController(
-      duration: const Duration(milliseconds: 800),
+      duration: const Duration(milliseconds: 250),
       vsync: this,
     );
 
