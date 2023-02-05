@@ -44,11 +44,9 @@ class Home extends StatelessWidget {
                 label: "Simular una API",
                 onTap: () {
                   Navigator.of(context).push(
-                    MaterialPageRoute<void>(
-                      builder: (BuildContext context) => SimularApi(
-                        environment: Environment.mock,
-                      ),
-                    ),
+                    MaterialPageRoute<void>(builder: (BuildContext context) {
+                      return const SimularApi(environment: Environment.mock);
+                    }),
                   );
                 },
               ),
