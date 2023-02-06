@@ -8,7 +8,7 @@ class FlipCardAnimationWithCurve extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Flip Card Animation"),
+        title: const Text("Flip Card Animation with curve"),
       ),
       body: ListView(
         children: [
