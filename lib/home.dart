@@ -7,6 +7,7 @@ import 'package:flutter_practice_code/screens/time_lines.dart';
 import 'package:flutter_practice_code/widgets/fpc_button.dart';
 
 import 'screens/flip_card_animation/flip_card_animation.dart';
+import 'screens/flip_card_animation_with_curve.dart/flip_card_animation_with_curve.dart';
 
 class Home extends StatelessWidget {
   const Home({Key? key}) : super(key: key);
@@ -70,6 +71,17 @@ class Home extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute<void>(builder: (BuildContext context) {
                       return const FlipCardAnimation();
+                    }),
+                  );
+                },
+              ),
+              const SizedBox(height: 5),
+              FpcButtom(
+                label: "Flip Card Animation with curve",
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<void>(builder: (BuildContext context) {
+                      return const FlipCardAnimationWithCurve();
                     }),
                   );
                 },
