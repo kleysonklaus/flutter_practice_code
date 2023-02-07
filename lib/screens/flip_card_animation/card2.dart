@@ -5,9 +5,9 @@ class Card2 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 100,
-      width: 200,
-      color: Colors.blue,
+      height: 10,
+      width: 20,
+      color: Colors.yellow,
       child: Center(
         child: Text("Texto Card 2, pero increiblemente extenso"),
       ),
