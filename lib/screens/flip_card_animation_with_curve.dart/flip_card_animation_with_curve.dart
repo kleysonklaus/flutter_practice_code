@@ -2,6 +2,9 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 
+import '../flip_card_animation/card1.dart';
+import '../flip_card_animation/card2.dart';
+
 class FlipCardAnimationWithCurve extends StatelessWidget {
   const FlipCardAnimationWithCurve({Key? key}) : super(key: key);
   @override
@@ -14,8 +17,10 @@ class FlipCardAnimationWithCurve extends StatelessWidget {
         children: [
           _FlipCardWidgetWithCurve(
             // controller: controller, front: const Card1(), back: const Card2()
-            front: Image.asset('assets/images/primero.jpg'),
-            back: Image.asset('assets/images/tercero.png'),
+            front: Card1(),
+            back: Card2(),
+            // front: Image.asset('assets/images/primero.jpg'),
+            // back: Image.asset('assets/images/tercero.png'),
           ),
           // ElevatedButton(
           //   onPressed: () async => controller.flipCard(),
@@ -28,8 +33,10 @@ class FlipCardAnimationWithCurve extends StatelessWidget {
 }
 
 class _FlipCardWidgetWithCurve extends StatefulWidget {
-  final Image front;
-  final Image back;
+  final Widget front;
+  final Widget back;
+  // final Image front;
+  // final Image back;
   const _FlipCardWidgetWithCurve({
     Key? key,
     required this.front,
