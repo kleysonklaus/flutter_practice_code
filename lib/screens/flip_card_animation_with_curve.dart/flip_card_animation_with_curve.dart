@@ -14,7 +14,7 @@ class FlipCardAnimationWithCurve extends StatelessWidget {
         title: const Text("Flip Card Animation with curve"),
       ),
       body: ListView(
-        children: [
+        children: const [
           _FlipCardWidgetWithCurve(
             // controller: controller, front: const Card1(), back: const Card2()
             front: Card1(),
@@ -51,8 +51,8 @@ class _FlipCardWidgetWithCurve extends StatefulWidget {
 class _FlipCardWidgetWithCurveState extends State<_FlipCardWidgetWithCurve>
     with TickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation _animation;
-  AnimationStatus _status = AnimationStatus.dismissed;
+  late Animation animation;
+  AnimationStatus currentStatus = AnimationStatus.dismissed;
   bool isFront = true;
   double anglePlus = 0;
 
@@ -62,10 +62,10 @@ class _FlipCardWidgetWithCurveState extends State<_FlipCardWidgetWithCurve>
 
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(milliseconds: 250),
+      duration: const Duration(milliseconds: 250),
     );
 
-    _animation = Tween(
+    animation = Tween(
       end: 1.0,
       begin: 0.0,
     ).animate(CurvedAnimation(
@@ -77,7 +77,7 @@ class _FlipCardWidgetWithCurveState extends State<_FlipCardWidgetWithCurve>
         setState(() {});
       })
       ..addStatusListener((status) {
-        _status = status;
+        currentStatus = status;
       });
   }
 
@@ -107,9 +107,9 @@ class _FlipCardWidgetWithCurveState extends State<_FlipCardWidgetWithCurve>
                 ..setEntry(3, 2, 0.001)
                 // ..setEntry(2, 1, 0.0015)
                 ..rotateY(angle),
-              // ..rotateY(pi * _animation.value),
+              // ..rotateY(pi * animation.value),
               child: Card(
-                // child: _animation.value <= 0.5
+                // child: animation.value <= 0.5
                 child: isFrontImage(angle.abs())
                     ? Container(
                         color: Colors.blue,
@@ -135,9 +135,9 @@ class _FlipCardWidgetWithCurveState extends State<_FlipCardWidgetWithCurve>
         //   alignment: FractionalOffset.center,
         //   transform: Matrix4.identity()
         //     ..setEntry(2, 1, 0.0015)
-        //     ..rotateY(pi * _animation.value),
+        //     ..rotateY(pi * animation.value),
         //   child: Card(
-        //     child: _animation.value <= 0.5
+        //     child: animation.value <= 0.5
         //         ? Container(
         //             color: Colors.blue,
         //             width: 350,
@@ -157,21 +157,21 @@ class _FlipCardWidgetWithCurveState extends State<_FlipCardWidgetWithCurve>
         ElevatedButton(
           onPressed: flipCard,
           // () {
-          //   if (_status == AnimationStatus.dismissed) {
+          //   if (currentStatus == AnimationStatus.dismissed) {
           //     _controller.forward();
           //   } else {
           //     _controller.reverse();
           //   }
           // },
-          child: Text("go"),
+          child: const Text("go"),
         )
       ],
     );
   }
 
   bool isFrontImage(double angle) {
-    final degress90 = pi / 2;
-    final degress270 = 3 * pi / 2;
+    const double degress90 = pi / 2;
+    const double degress270 = 3 * pi / 2;
     return angle <= degress90 || angle >= degress270;
   }
 }
