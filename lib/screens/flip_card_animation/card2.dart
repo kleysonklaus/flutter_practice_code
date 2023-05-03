@@ -8,7 +8,7 @@ class Card2 extends StatelessWidget {
       height: 10,
       width: 20,
       color: Colors.yellow,
-      child: Center(
+      child: const Center(
         child: Text("Texto Card 2, pero increiblemente extenso"),
       ),
     );
