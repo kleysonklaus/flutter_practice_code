@@ -37,11 +37,11 @@ class WindowsButton implements Button {
   @override
   Widget onRender() {
     return ElevatedButton(
-      child: Text("windows button"),
       onPressed: () {},
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.black,
       ),
+      child: const Text("windows button"),
     );
   }
 }
@@ -53,11 +53,11 @@ class HTMLButton implements Button {
   @override
   Widget onRender() {
     return ElevatedButton(
-      child: Text("html button"),
       onPressed: () {},
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.red,
       ),
+      child: const Text("html button"),
     );
   }
 }
@@ -66,11 +66,11 @@ class Factory extends StatelessWidget {
   const Factory({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    Dialog _instance = WindowsDialog();
-    // Dialog _instance = WebDialog();
+    Dialog instance = WindowsDialog();
+    // Dialog instance = WebDialog();
     return Scaffold(
       body: Center(
-        child: _instance.render(),
+        child: instance.render(),
       ),
     );
   }
