@@ -115,8 +115,8 @@ class _FlipCardWidgetState extends State<_FlipCardWidget>
   }
 
   bool isFrontImage(double angle) {
-    final degress90 = pi / 2;
-    final degress270 = 3 * pi / 2;
+    const double degress90 = pi / 2;
+    const double degress270 = 3 * pi / 2;
     return angle <= degress90 || angle >= degress270;
   }
 }
