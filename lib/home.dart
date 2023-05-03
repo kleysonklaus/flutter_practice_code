@@ -59,7 +59,7 @@ class Home extends StatelessWidget {
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute<void>(
-                      builder: (BuildContext context) => Factory(),
+                      builder: (BuildContext context) => const Factory(),
                     ),
                   );
                 },
