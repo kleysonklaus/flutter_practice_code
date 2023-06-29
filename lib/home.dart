@@ -3,6 +3,7 @@ import 'package:flutter_practice_code/screens/metodo_factory/factory.dart';
 import 'package:flutter_practice_code/screens/simple_list_view.dart';
 import 'package:flutter_practice_code/screens/simular_api/enum/enviorment.dart';
 import 'package:flutter_practice_code/screens/simular_api/screen/simular_api.dart';
+import 'package:flutter_practice_code/screens/theme_del_sistema/theme_del_sistema.dart';
 import 'package:flutter_practice_code/screens/time_lines.dart';
 import 'package:flutter_practice_code/widgets/fpc_button.dart';
 
@@ -82,6 +83,17 @@ class Home extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute<void>(builder: (BuildContext context) {
                       return const FlipCardAnimationWithCurve();
+                    }),
+                  );
+                },
+              ),
+              const SizedBox(height: 5),
+              FpcButtom(
+                label: "Theme del Sistema",
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute<void>(builder: (BuildContext context) {
+                      return const ThemeDelSistema();
                     }),
                   );
                 },

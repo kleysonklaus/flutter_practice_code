@@ -16,9 +16,14 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Practice Code',
+      // theme: ThemeData(
+      //   useMaterial3: true,
+      //   primarySwatch: Colors.blue,
+      // ),
       theme: ThemeData(
         useMaterial3: true,
-        primarySwatch: Colors.blue,
+        brightness: Brightness.light, // O Brightness.dark para un tema oscuro
+        // Otros ajustes de tema
       ),
       home: const Home(),
     );
