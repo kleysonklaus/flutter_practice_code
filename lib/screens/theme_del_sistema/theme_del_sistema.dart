@@ -5,7 +5,7 @@ class ThemeDelSistema extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final _isDarkTheme = Theme.of(context).brightness == Brightness.dark;
-    print(_isDarkTheme);
+    print("dark es: $_isDarkTheme");
     return Scaffold(
       appBar: AppBar(),
       body: Container(
