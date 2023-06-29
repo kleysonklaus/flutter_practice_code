@@ -21,12 +21,12 @@ class MyApp extends StatelessWidget {
       //   primarySwatch: Colors.blue,
       // ),
       themeMode: ThemeMode.system,
-      // theme: ThemeData(
-      //   theme
-      //   useMaterial3: true,
-      //   brightness: Brightness., // O Brightness.dark para un tema oscuro
-      //   // Otros ajustes de tema
-      // ),
+      theme: ThemeData(
+        useMaterial3: true,
+
+        // brightness: Brightness.light, // O Brightness.dark para un tema oscuro
+        // Otros ajustes de tema
+      ),
       home: const Home(),
     );
   }
